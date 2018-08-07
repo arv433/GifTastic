@@ -11,20 +11,41 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div id="buttonsContainer"></div>
-            <form id="searchForm" class="col-md-3">
-                <label for="videogameInput">Add a Video Game</label>
-                <input type="text" id="videogameInput">
-                <input type="submit" id="videogameSubmit" value="Add">
-                <label for="videogameSubmit">
-                    <img src="assets/images/loadingGif.gif" alt="loading" id="loadingImage">
-                </label>
-            </form>
+    <!-- Nav Tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active">
+            <a href="#gifSearchScreen" aria-controls="1" role="tab" data-toggle="tab">
+                Search a Game
+            </a>
+        </li>
+        <li role="presentation">
+            <a href="#favoritesScreen" aria-controls="2" role="tab" data-toggle="tab">
+                Favorites
+            </a>
+        </li>
+    </ul>
+
+    <!-- Tab Panes -->
+    <div class="tab-content">
+        <div role="tabpanel" id="gifSearchScreen" class="tab-pane container-fluid active">
+            <div class="row">
+                <div id="buttonsContainer"></div>
+                <form id="searchForm" class="col-sm-4">
+                    <label for="videogameInput">Add a Video Game</label>
+                    <input type="text" id="videogameInput">
+                    <input type="submit" id="videogameSubmit" value="Add">
+                    <label for="videogameSubmit">
+                        <img src="assets/images/loadingGif.gif" alt="loading" id="loadingImage">
+                    </label>
+                </form>
+            </div>
+            <div id="gifDisplay"></div>
         </div>
-        <div id="gifDisplay"></div>
+        <div role="tabpanel" id="favoritesScreen" class="container tab-pane">
+            <div id="favoriteGifsDisplay"></div>
+        </div>
     </div>
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
