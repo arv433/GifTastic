@@ -13,7 +13,7 @@
 <body>
     <!-- Nav Tabs -->
     <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation" class="active">
+        <li role="presentation" class="active" id="firstTab">
             <a href="#gifSearchScreen" aria-controls="1" role="tab" data-toggle="tab">
                 Search a Game
             </a>
@@ -27,6 +27,7 @@
 
     <!-- Tab Panes -->
     <div class="tab-content">
+        <!-- Search Screen -->
         <div role="tabpanel" id="gifSearchScreen" class="tab-pane container-fluid active">
             <div class="row">
                 <div id="buttonsContainer"></div>
@@ -41,6 +42,7 @@
             </div>
             <div id="gifDisplay"></div>
         </div>
+        <!-- Favorites Screens -->
         <div role="tabpanel" id="favoritesScreen" class="container tab-pane">
             <div id="favoriteGifsDisplay"></div>
         </div>

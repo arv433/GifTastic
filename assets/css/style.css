@@ -4,13 +4,14 @@ body {
 
 ul {
     background: #3f3f3f;
+    border-color: #3f3f3f !important;
 }
 
 li {
-    margin: 5px;
+    margin: 5px 0px 5px 12.5px;
 }
 
-a {
+li > a {
     color: #ffffff;
 }
 
@@ -19,7 +20,7 @@ a.active {
 }
 
 li:not(.active) > a {
-    opacity: 0.5;
+    opacity: 0.75;
 }
 
 li:not(.active) > a:hover {
@@ -72,6 +73,7 @@ li:not(.active) > a:hover {
     position: relative;
     background: #ffffff;
     text-align: center;
+    display: flex;
 }
 
 .gifDiv:hover .star {
@@ -79,6 +81,10 @@ li:not(.active) > a:hover {
 }
 
 .gifDiv:hover .rating {
+    opacity: 1;
+}
+
+.gifDiv:hover .downloadBtn {
     opacity: 1;
 }
 
@@ -102,15 +108,36 @@ li:not(.active) > a:hover {
 
 .rating {
     color: #ffffff;
-    -webkit-text-fill-color: #cc0000;
-    -webkit-text-stroke-width: 0.75px;
-    -webkit-text-stroke-color: #ffffff;
-    font-size: 25px;
+    -webkit-text-fill-color: #ffffff;
+    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-color: #000000;
+    font-size: 15px;
+    font-weight: bold;
     position: absolute;
     bottom: 10px;
     left: 10px;
     opacity: 0;
     transition: 0.7s;
+}
+
+.downloadBtn {
+    color: #ffffff;
+    -webkit-text-fill-color: #ffffff;
+    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-color: #000000;
+    font-size: 20px;
+    position: absolute;
+    opacity: 0;
+    transition: 0.7s;
+    text-decoration: none;
+    vertical-align: baseline;
+}
+
+.downloadBtnContainer {
+    position: absolute;
+    bottom: 35px;
+    right: 32px;
+    display: inline;
 }
 
 #loadingImage {
